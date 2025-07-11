@@ -17,7 +17,8 @@
   border-radius: 10px;
   font-size: 14px;
   transition: all 0.2s ease;
-  width: 100%;
+  width: 178px;
+  height: 32px;
   box-sizing: border-box;
 }
 
