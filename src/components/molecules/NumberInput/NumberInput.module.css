@@ -1,0 +1,98 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-size: 14px;
+  color: #374151;
+  font-weight: 500;
+}
+
+.inputGroup {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #E5E7EB;
+  border-radius: 6px;
+  background-color: white;
+  height: 36px;
+  width: fit-content;
+}
+
+.inputGroup:hover {
+  border-color: #D1D5DB;
+}
+
+.inputGroup:focus-within {
+  border-color: #374151;
+  box-shadow: 0 0 0 1px #374151;
+}
+
+.input {
+  width: 36px;
+  height: 36px;
+  border: none;
+  background-color: transparent;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: #111827;
+  outline: none;
+  padding: 0;
+}
+
+.input:focus {
+  background-color: transparent;
+}
+
+/* Remove number input arrows */
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input[type=number] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+/* Button styles */
+.inputGroup button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px !important;
+  height: 28px !important;
+  min-width: unset !important;
+  padding: 0 !important;
+  margin: 0 4px !important;
+  border: none !important;
+  background: #EEEEEE !important;
+  color: #000000 !important;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.inputGroup button svg {
+  width: 16px;
+  height: 16px;
+  color: inherit;
+}
+
+.inputGroup button:hover {
+  background: #E5E7EB !important;
+  color: #000000 !important;
+}
+
+.inputGroup button:active {
+  background: #D1D5DB !important;
+  color: #000000 !important;
+}
+
+.error {
+  color: #EF4444;
+  font-size: 14px;
+  margin-top: 4px;
+}

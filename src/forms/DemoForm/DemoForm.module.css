@@ -1,0 +1,126 @@
+.container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.buttonSection {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.buttonSection h3 {
+  margin-bottom: 16px;
+  color: #666;
+  font-size: 18px;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 400px;
+  margin-bottom: 24px;
+}
+
+h2 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+.iconSection {
+  display: flex;
+  gap: 24px;
+}
+
+.iconGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.iconWrapper {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: black;
+  border-radius: 4px;
+}
+
+.iconLabel {
+  font-size: 14px;
+  color: #666;
+}
+
+.inputsGrid {
+  display: flex;
+  gap: 24px;
+  padding: 16px 0;
+}
+
+.inputColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 280px;
+}
+
+.inputLabel {
+  color: #666;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.panel {
+  background-color: #F5F5F5;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.buttonGrid {
+  display: grid;
+  gap: 16px;
+}
+
+.buttonHeader {
+  display: grid;
+  grid-template-columns: 200px repeat(5, 1fr);
+  gap: 16px;
+  color: #666;
+  font-size: 12px;
+}
+
+.buttonHeader > div:first-child {
+  font-weight: 500;
+}
+
+.buttonRow {
+  display: grid;
+  grid-template-columns: 200px repeat(5, 1fr);
+  gap: 16px;
+  align-items: center;
+}
+
+.buttonRow > div:first-child {
+  color: #666;
+  font-size: 14px;
+}
+
+.componentsTab {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}

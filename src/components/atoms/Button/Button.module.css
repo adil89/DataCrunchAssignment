@@ -1,0 +1,206 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border: none;
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.button:disabled {
+  background-color: #D3D3D3 !important;
+  color: #4A4A4A !important;
+  cursor: not-allowed;
+  border: none !important;
+}
+
+.primary-outlined:disabled,
+.secondary-outlined:disabled {
+  background-color: white !important;
+  color: #909090 !important;
+  border: 2px solid #E5E7EB !important;
+}
+
+.button:hover {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.button:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Sizes */
+.small {
+  width: 58px;
+  height: 24px;
+  font-size: 14px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button.small.iconLeft,
+.button.small.iconRight {
+  width: 74px;
+  padding: 0;
+}
+
+.medium {
+  width: 80px;
+  height: 32px;
+  font-size: 16px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.medium[class*="iconLeft"],
+.medium[class*="iconRight"] {
+  width: 100px;
+  padding: 0;
+}
+
+/* Custom button size */
+.customSize {
+  width: 135.5px !important;
+  height: 32px !important;
+  padding: 0;
+  min-width: 135.5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Icon styles */
+.button.iconOnly {
+  padding: 0;
+  width: 32px !important;
+  height: 32px !important;
+  font-size: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px !important;
+}
+
+.iconOnly.small {
+  height: 24px;
+  padding: 6px;
+  font-size: 18px;
+  min-width: min-content;
+}
+
+.iconLeft, .iconRight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+/* Primary Contained */
+.primary-contained {
+  background-color: #4B7A8A;
+  color: white;
+  border: none;
+}
+
+.primary-contained:hover:not(:disabled),
+.primary-contained:focus-visible:not(:disabled),
+.primary-contained:active:not(:disabled) {
+  background-color: #245866;
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+
+/* Primary Outlined */
+.primary-outlined {
+  background-color: transparent;
+  border: 2px solid #4B7A8A;
+  color: #4B7A8A;
+}
+
+.primary-outlined:hover:not(:disabled),
+.primary-outlined:focus-visible:not(:disabled) {
+  background-color: rgba(75, 122, 138, 0.1);
+  border-color: #245866;
+  color: #245866;
+}
+
+/* Secondary Contained */
+.secondary-contained {
+  background-color: #E5E7EB;
+  color: #374151;
+}
+
+.secondary-contained:hover:not(:disabled),
+.secondary-contained:focus-visible:not(:disabled) {
+  background-color: #D1D5DB;
+}
+
+/* Secondary Outlined */
+.secondary-outlined {
+  background-color: transparent;
+  border: 2px solid #E5E7EB;
+  color: #374151;
+}
+
+.secondary-outlined:hover:not(:disabled),
+.secondary-outlined:focus-visible:not(:disabled) {
+  background-color: rgba(229, 231, 235, 0.5);
+  border-color: #374151;
+}
+
+/* Black Outlined variant */
+.black-outlined {
+  background-color: transparent;
+  border-color: black;
+  color: #245866;
+}
+
+.black-outlined:hover:not(:disabled),
+.black-outlined:focus-visible:not(:disabled) {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Custom Primary Contained */
+.custom-primary-contained {
+  background-color: #4B7A8A;
+  color: white;
+}
+
+.custom-primary-contained:hover:not(:disabled),
+.custom-primary-contained:focus-visible:not(:disabled) {
+  background-color: #3c6270;
+}
+
+/* Disabled state */
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Active/Pressed state */
+.button:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+/* Special button styles */
+.button1, .button2 {
+  background-color: #D3D3D3 !important;
+  opacity: 1 !important;
+}

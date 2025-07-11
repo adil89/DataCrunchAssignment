@@ -1,0 +1,32 @@
+.tabList {
+  display: flex;
+  gap: 24px;
+  border-bottom: 1px solid #E5E7EB;
+  margin-bottom: 24px;
+}
+
+.tab {
+  padding: 12px 4px;
+  color: #666;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  font-size: 16px;
+  background: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.tab[aria-selected="true"] {
+  color: #245866;
+  border-bottom-color: #245866;
+}
+
+.tab:hover:not([aria-selected="true"]) {
+  color: #4F8395;
+  border-bottom-color: #4F8395;
+}
+
+.tabPanel {
+  outline: none;
+}
