@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { NumberInput } from '../../components/molecules/NumberInput/NumberInput';
-import { Slider } from '../../components/molecules/Slider/Slider';
-import { Button } from '../../components/atoms/Button/Button';
-import { TrashIcon } from '../../components/atoms/Icons/Icons';
-import { Input } from '../../components/atoms/Input/Input';
+import { useTranslation } from 'react-i18next';
+import { NumberInput } from '../../molecules/NumberInput/NumberInput';
+import { Slider } from '../../molecules/Slider/Slider';
+import { Button } from '../../atoms/Button/Button';
+import { TrashIcon } from '../../atoms/Icons/Icons';
+import { Input } from '../../atoms/Input/Input';
 import styles from './DataForm.module.css';
 
 interface FormData {
@@ -12,6 +13,7 @@ interface FormData {
 }
 
 export const DataForm: React.FC = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState<FormData>({
     name: '',
     size: 0
@@ -34,7 +36,7 @@ export const DataForm: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log(formData);
-    alert(`Form Data:\nName: ${formData.name}\nSize: ${formData.size} GB`);
+    alert(t('form.formDataAlert', { name: formData.name, size: formData.size }));
   };
 
   const handleClear = () => {
@@ -47,16 +49,16 @@ export const DataForm: React.FC = () => {
   return (
     <form onSubmit={handleSubmit} className={styles.form}>
       <div className={styles.formGroup}>
-        <label className={styles.label}>Name</label>
+        <label className={styles.label}>{t('form.name')}</label>
         <Input
           value={formData.name}
           onChange={handleNameChange}
-          placeholder="enter text"
+          placeholder={t('inputs.placeholder')}
         />
       </div>
 
       <div className={styles.formGroup}>
-        <label className={styles.label}>Size (GB)</label>
+        <label className={styles.label}>{t('form.size')}</label>
         <div style={{ display: 'flex', gap: '16px', alignItems: 'center' }}>
           <NumberInput
             value={formData.size}
@@ -83,14 +85,14 @@ export const DataForm: React.FC = () => {
           iconLeft={<TrashIcon />}
           size="customSize"
         >
-          Clear
+          {t('buttons.clear')}
         </Button>
         <Button 
           variant="primary-contained" 
           type="submit"
           size="customSize"
         >
-          Submit
+          {t('buttons.submit')}
         </Button>
       </div>
     </form>

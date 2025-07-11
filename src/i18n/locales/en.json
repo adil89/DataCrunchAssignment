@@ -1,0 +1,50 @@
+{
+  "buttons": {
+    "button": "Button",
+    "clear": "Clear",
+    "submit": "Submit",
+    "disabled": "Disabled",
+    "iconLeft": "Icon left",
+    "iconRight": "Icon right", 
+    "iconOnly": "Icon only"
+  },
+  "inputs": {
+    "placeholder": "enter text",
+    "label": "Label",
+    "disabled": "Disabled"
+  },
+  "form": {
+    "name": "Name",
+    "size": "Size (GB)",
+    "formDataAlert": "Form Data:\nName: {{name}}\nSize: {{size}} GB"
+  },
+  "components": {
+    "icons": "Icons",
+    "inputs": "Inputs",
+    "numberInput": "Number Input",
+    "slider": "Slider",
+    "buttons": "Buttons"
+  },
+  "tabs": {
+    "components": "Components",
+    "form": "Form"
+  },
+  "buttonSizes": {
+    "small": "Small",
+    "medium": "Medium"
+  },
+  "buttonVariants": {
+    "primaryContained": "Primary/Contained",
+    "primaryOutlined": "Primary/Outlined",
+    "secondaryContained": "Secondary/Contained",
+    "secondaryOutlined": "Secondary/Outlined"
+  },
+  "language": {
+    "selector": "Language",
+    "english": "English",
+    "spanish": "Spanish"
+  },
+  "app": {
+    "title": "Design System"
+  }
+}

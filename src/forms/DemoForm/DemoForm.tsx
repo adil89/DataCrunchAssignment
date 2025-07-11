@@ -1,14 +1,16 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Button } from '../../components/atoms/Button/Button';
 import { Input } from '../../components/atoms/Input/Input';
 import { PlusIcon, MinusIcon, TrashIcon } from '../../components/atoms/Icons/Icons';
 import { Slider } from '../../components/molecules/Slider/Slider';
 import { NumberInput } from '../../components/molecules/NumberInput/NumberInput';
 import { Tabs } from '../../components/molecules/Tabs/Tabs';
-import { DataForm } from '../DataForm/DataForm';
+import { DataForm } from '../../components/organisms/DataForm/DataForm';
 import styles from './DemoForm.module.css';
 
 const ComponentsContent = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = React.useState({
     size: 0
   });
@@ -23,7 +25,7 @@ const ComponentsContent = () => {
   return (
   <div className={styles.componentsTab}>
     <div className={styles.panel}>
-      <h2>Icons</h2>
+      <h2>{t('components.icons')}</h2>
       <div className={styles.iconSection}>
         <div className={styles.iconGroup}>
           <div className={styles.iconWrapper}>
@@ -46,21 +48,21 @@ const ComponentsContent = () => {
     </div>
 
     <div className={styles.panel}>
-      <h2>Inputs</h2>
+      <h2>{t('components.inputs')}</h2>
       <div className={styles.inputsGrid}>
         <div className={styles.inputColumn}>
-          <div>Label</div>
+          <div>{t('inputs.label')}</div>
           <Input
             label=""
-            placeholder="enter text"
+            placeholder={t('inputs.placeholder')}
           />
         </div>
 
         <div className={styles.inputColumn}>
-          <div>Disabled</div>
+          <div>{t('inputs.disabled')}</div>
           <Input
             label=""
-            placeholder="enter text"
+            placeholder={t('inputs.placeholder')}
             isDisabled
           />
         </div>
@@ -68,10 +70,10 @@ const ComponentsContent = () => {
     </div>
 
     <div className={styles.panel}>
-      <h2>Number Input</h2>
+      <h2>{t('components.numberInput')}</h2>
       <div className={styles.inputsGrid}>
         <div className={styles.inputColumn}>
-          <div>Label</div>
+          <div>{t('inputs.label')}</div>
           <NumberInput
             label=""
             value={formData.size}
@@ -82,7 +84,7 @@ const ComponentsContent = () => {
         </div>
 
         <div className={styles.inputColumn}>
-          <div>Disabled</div>
+          <div>{t('inputs.disabled')}</div>
           <NumberInput
             label=""
             value={0}
@@ -95,10 +97,10 @@ const ComponentsContent = () => {
     </div>
 
     <div className={styles.panel}>
-      <h2>Slider</h2>
+      <h2>{t('components.slider')}</h2>
       <div className={styles.inputsGrid}>
         <div className={styles.inputColumn}>
-          <div className={styles.inputLabel}>Slider</div>
+          <div className={styles.inputLabel}>{t('components.slider')}</div>
           <Slider
             label=""
             value={formData.size}
@@ -111,58 +113,58 @@ const ComponentsContent = () => {
     </div>
 
     <div className={styles.panel}>
-      <h2>Buttons</h2>
+      <h2>{t('components.buttons')}</h2>
       <div className={styles.buttonGrid}>
         <div className={styles.buttonHeader}>
-          <div>Buttons</div>
-          <div>Small</div>
-          <div>Medium</div>
-          <div>Medium</div>
-          <div>Medium</div>
-          <div>Medium</div>
+          <div>{t('components.buttons')}</div>
+          <div>{t('buttonSizes.small')}</div>
+          <div>{t('buttonSizes.medium')}</div>
+          <div>{t('buttonSizes.medium')}</div>
+          <div>{t('buttonSizes.medium')}</div>
+          <div>{t('buttonSizes.medium')}</div>
         </div>
         
         <div className={styles.buttonHeader}>
           <div></div>
-          <div>Primary/Contained</div>
-          <div>Primary/Contained</div>
-          <div>Primary/Outlined</div>
-          <div>Secondary/Contained</div>
-          <div>Secondary/Outlined</div>
+          <div>{t('buttonVariants.primaryContained')}</div>
+          <div>{t('buttonVariants.primaryContained')}</div>
+          <div>{t('buttonVariants.primaryOutlined')}</div>
+          <div>{t('buttonVariants.secondaryContained')}</div>
+          <div>{t('buttonVariants.secondaryOutlined')}</div>
         </div>
 
         <div className={styles.buttonRow}>
-          <div>Button</div>
-          <Button size="small" variant="primary-contained">Button</Button>
-          <Button variant="primary-contained">Button</Button>
-          <Button variant="primary-outlined">Button</Button>
-          <Button variant="secondary-contained">Button</Button>
-          <Button variant="secondary-outlined">Button</Button>
+          <div>{t('buttons.button')}</div>
+          <Button size="small" variant="primary-contained">{t('buttons.button')}</Button>
+          <Button variant="primary-contained">{t('buttons.button')}</Button>
+          <Button variant="primary-outlined">{t('buttons.button')}</Button>
+          <Button variant="secondary-contained">{t('buttons.button')}</Button>
+          <Button variant="secondary-outlined">{t('buttons.button')}</Button>
         </div>
 
         <div className={styles.buttonRow}>
-          <div>Disabled</div>
-          <Button size="small" variant="primary-contained" isDisabled>Button</Button>
-          <Button variant="primary-contained" isDisabled>Button</Button>
-          <Button variant="primary-outlined" isDisabled>Button</Button>
-          <Button variant="secondary-contained" isDisabled>Button</Button>
-          <Button variant="secondary-outlined" isDisabled>Button</Button>
+          <div>{t('buttons.disabled')}</div>
+          <Button size="small" variant="primary-contained" isDisabled>{t('buttons.button')}</Button>
+          <Button variant="primary-contained" isDisabled>{t('buttons.button')}</Button>
+          <Button variant="primary-outlined" isDisabled>{t('buttons.button')}</Button>
+          <Button variant="secondary-contained" isDisabled>{t('buttons.button')}</Button>
+          <Button variant="secondary-outlined" isDisabled>{t('buttons.button')}</Button>
         </div>
 
         <div className={styles.buttonRow}>
-          <div>Icon left</div>
-          <Button size="small" variant="primary-contained" iconLeft="+">Button</Button>
-          <Button variant="primary-contained" iconLeft="+">Button</Button>
+          <div>{t('buttons.iconLeft')}</div>
+          <Button size="small" variant="primary-contained" iconLeft="+">{t('buttons.button')}</Button>
+          <Button variant="primary-contained" iconLeft="+">{t('buttons.button')}</Button>
         </div>
 
         <div className={styles.buttonRow}>
-          <div>Icon right</div>
-          <Button size="small" variant="primary-contained" iconRight="+">Button</Button>
-          <Button variant="primary-contained" iconRight="+">Button</Button>
+          <div>{t('buttons.iconRight')}</div>
+          <Button size="small" variant="primary-contained" iconRight="+">{t('buttons.button')}</Button>
+          <Button variant="primary-contained" iconRight="+">{t('buttons.button')}</Button>
         </div>
 
         <div className={styles.buttonRow}>
-          <div>Icon only</div>
+          <div>{t('buttons.iconOnly')}</div>
           <Button size="small" variant="primary-contained" iconOnly iconLeft="+"/>
           <Button variant="primary-contained" iconOnly iconLeft="×"/>
         </div>
@@ -173,15 +175,16 @@ const ComponentsContent = () => {
 };
 
 export function DemoForm() {
+  const { t } = useTranslation();
   const tabs = [
     {
       id: 'components',
-      label: 'Components',
+      label: t('tabs.components'),
       content: <ComponentsContent />
     },
     {
       id: 'form',
-      label: 'Form',
+      label: t('tabs.form'),
       content: <DataForm />
     }
   ];

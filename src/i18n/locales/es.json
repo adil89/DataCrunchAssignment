@@ -1,0 +1,50 @@
+{
+  "buttons": {
+    "button": "Botón",
+    "clear": "Limpiar",
+    "submit": "Enviar",
+    "disabled": "Deshabilitado",
+    "iconLeft": "Icono izquierda",
+    "iconRight": "Icono derecha",
+    "iconOnly": "Solo icono"
+  },
+  "inputs": {
+    "placeholder": "ingrese texto",
+    "label": "Etiqueta",
+    "disabled": "Deshabilitado"
+  },
+  "form": {
+    "name": "Nombre",
+    "size": "Tamaño (GB)",
+    "formDataAlert": "Datos del formulario:\nNombre: {{name}}\nTamaño: {{size}} GB"
+  },
+  "components": {
+    "icons": "Iconos",
+    "inputs": "Entradas",
+    "numberInput": "Entrada numérica",
+    "slider": "Deslizador",
+    "buttons": "Botones"
+  },
+  "tabs": {
+    "components": "Componentes",
+    "form": "Formulario"
+  },
+  "buttonSizes": {
+    "small": "Pequeño",
+    "medium": "Mediano"
+  },
+  "buttonVariants": {
+    "primaryContained": "Primario/Contenido",
+    "primaryOutlined": "Primario/Delineado",
+    "secondaryContained": "Secundario/Contenido",
+    "secondaryOutlined": "Secundario/Delineado"
+  },
+  "language": {
+    "selector": "Idioma",
+    "english": "Inglés",
+    "spanish": "Español"
+  },
+  "app": {
+    "title": "Sistema de Diseño"
+  }
+}
