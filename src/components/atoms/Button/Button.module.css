@@ -58,6 +58,23 @@
   padding: 0;
 }
 
+.mini {
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+}
+
+.button.mini.iconLeft,
+.button.mini.iconRight {
+  width: 20px;
+  padding: 0;
+}
+
 .medium {
   width: 80px;
   height: 32px;
@@ -85,8 +102,20 @@
   justify-content: center;
 }
 
+/* Internal size for NumberInput buttons */
+._internal-number-input {
+  width: 20px !important;
+  height: 20px !important;
+  padding: 0;
+  min-width: 20px !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
 /* Icon styles */
-.button.iconOnly:not(.customSize) {
+.button.iconOnly:not(.customSize):not(.mini) {
   padding: 0;
   width: 32px !important;
   height: 32px !important;
@@ -110,6 +139,14 @@
   padding: 6px;
   font-size: 18px;
   min-width: min-content;
+}
+
+.iconOnly.mini {
+  width: 20px !important;
+  height: 20px !important;
+  padding: 0;
+  font-size: 12px;
+  min-width: 20px !important;
 }
 
 .iconLeft, .iconRight {

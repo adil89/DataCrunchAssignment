@@ -17,8 +17,7 @@
   border-radius: 10px;
   font-size: 14px;
   transition: all 0.2s ease;
-  width: 178px;
-  height: 32px;
+  width: 100%;
   box-sizing: border-box;
 }
 
@@ -53,4 +52,16 @@
   border-color: #dc2626;
   box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.1);
   /* Keep error state red even when focused */
+}
+
+/* Styling for input when used in NumberInput */
+.numberInputStyle {
+  width: 64px !important;
+  height: 22px !important;
+  text-align: center;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  font-weight: 500;
 }

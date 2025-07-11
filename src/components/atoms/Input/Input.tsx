@@ -16,6 +16,21 @@ export interface InputProps extends Omit<TextFieldProps, 'children'> {
   isRequired?: boolean;
 }
 
+// Internal component for use within NumberField
+export const InputElement = ({ 
+  value, 
+  isNumberInput = false, 
+  ...props 
+}: { 
+  value?: string; 
+  isNumberInput?: boolean; 
+} & Omit<React.ComponentProps<typeof AriaInput>, 'className'>) => {
+  const inputClasses = isNumberInput 
+    ? `${styles.input} ${styles.numberInputStyle}` 
+    : styles.input;
+  return <AriaInput {...props} className={inputClasses} value={value} />;
+};
+
 export const Input = ({
   label,
   error,

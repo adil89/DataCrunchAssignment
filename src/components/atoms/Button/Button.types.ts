@@ -8,7 +8,7 @@ export interface ButtonProps {
   /** Visual style variant of the button */
   variant?: 'primary-contained' | 'primary-outlined' | 'secondary-contained' | 'secondary-outlined' | 'black-outlined' | 'custom-primary-contained';
   /** Size of the button */
-  size?: 'small' | 'medium' | 'customSize';
+  size?: 'small' | 'medium' | 'mini' | 'customSize' | '_internal-number-input';
   /** Whether the button is disabled */
   isDisabled?: boolean;
   /** Icon to show before the text */

@@ -2,11 +2,11 @@ import React from 'react';
 import {
   NumberField,
   Label,
-  Input as AriaInput,
   FieldError
 } from 'react-aria-components';
 import { Button } from '../../atoms/Button/Button';
 import { PlusIcon, MinusIcon } from '../../atoms/Icons/Icons';
+import { InputElement } from '../../atoms/Input/Input';
 import styles from './NumberInput.module.css';
 
 export interface NumberInputProps {
@@ -44,42 +44,25 @@ export const NumberInput: React.FC<NumberInputProps> = ({
         {label && <Label className={styles.label}>{label}</Label>}
         <div className={styles.inputGroup}>
           <Button 
-            variant="primary-contained"
-            size="customSize"
-            style={{ 
-              width: '20px !important', 
-              height: '20px !important', 
-              minWidth: '20px !important',
-              transform: 'translateX(-2px)',
-              position: 'relative'
-            }}
+            variant="secondary-contained"
+            size="mini"
             iconOnly
             slot="decrement"
             type="button"
-            aria-label="Decrease value"
             isDisabled={value === 0}
           >
             <MinusIcon />
           </Button>
-          <AriaInput
-            className={styles.input}
-            aria-label="Counter value"
+          <InputElement
+            isNumberInput={true}
             value={value?.toString() ?? '0'}
           />
           <Button 
-            variant="primary-contained"
-            size="customSize"
-            style={{ 
-              width: '20px !important', 
-              height: '20px !important', 
-              minWidth: '20px !important',
-              transform: 'translateX(-8px)',
-              position: 'relative'
-            }}
+            variant="secondary-contained"
+            size="mini"
             iconOnly
             slot="increment"
             type="button"
-            aria-label="Increase value"
           >
             <PlusIcon />
           </Button>
