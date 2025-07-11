@@ -21,4 +21,6 @@ export interface ButtonProps {
   slot?: 'increment' | 'decrement';
   /** HTML button type */
   type?: 'button' | 'submit' | 'reset';
+  /** Custom inline styles */
+  style?: React.CSSProperties;
 }

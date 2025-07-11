@@ -13,7 +13,8 @@ export const Button: React.FC<ButtonProps> = ({
   iconRight,
   iconOnly,
   slot,
-  type = 'button'
+  type = 'button',
+  style
 }) => {
   const buttonClasses = [
     styles.button,
@@ -31,6 +32,7 @@ export const Button: React.FC<ButtonProps> = ({
       isDisabled={isDisabled}
       slot={slot}
       type={type}
+      style={style}
     >
       {iconLeft && <span className={styles.iconLeft}>{iconLeft}</span>}
       {iconOnly ? children : (

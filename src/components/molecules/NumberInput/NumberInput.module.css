@@ -13,11 +13,19 @@
 .inputGroup {
   display: inline-flex;
   align-items: center;
+  justify-content: flex-start;
   border: 1px solid #E5E7EB;
   border-radius: 6px;
   background-color: white;
-  height: 36px;
-  width: fit-content;
+  height: 24px;
+  width: 104px;
+  padding: 2px;
+  box-sizing: border-box;
+}
+
+/* Position increment button */
+.inputGroup button[slot="increment"] {
+  transform: translateX(-4px);
 }
 
 .inputGroup:hover {
@@ -30,8 +38,8 @@
 }
 
 .input {
-  width: 36px;
-  height: 36px;
+  width: 64px;
+  height: 22px;
   border: none;
   background-color: transparent;
   text-align: center;
@@ -63,21 +71,26 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 28px !important;
-  height: 28px !important;
+  width: 20px !important;
+  height: 20px !important;
   min-width: unset !important;
   padding: 0 !important;
-  margin: 0 4px !important;
+  margin: 1px !important;
   border: none !important;
   background: #EEEEEE !important;
   color: #000000 !important;
   border-radius: 4px;
   cursor: pointer;
+  flex-shrink: 0;
+}
+
+.inputGroup button[slot="increment"] {
+  margin-left: -4px;
 }
 
 .inputGroup button svg {
-  width: 16px;
-  height: 16px;
+  width: 12px;
+  height: 12px;
   color: inherit;
 }
 

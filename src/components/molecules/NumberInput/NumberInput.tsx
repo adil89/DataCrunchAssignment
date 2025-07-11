@@ -45,7 +45,14 @@ export const NumberInput: React.FC<NumberInputProps> = ({
         <div className={styles.inputGroup}>
           <Button 
             variant="primary-contained"
-            size="small"
+            size="customSize"
+            style={{ 
+              width: '20px !important', 
+              height: '20px !important', 
+              minWidth: '20px !important',
+              transform: 'translateX(-2px)',
+              position: 'relative'
+            }}
             iconOnly
             slot="decrement"
             type="button"
@@ -61,7 +68,14 @@ export const NumberInput: React.FC<NumberInputProps> = ({
           />
           <Button 
             variant="primary-contained"
-            size="small"
+            size="customSize"
+            style={{ 
+              width: '20px !important', 
+              height: '20px !important', 
+              minWidth: '20px !important',
+              transform: 'translateX(-8px)',
+              position: 'relative'
+            }}
             iconOnly
             slot="increment"
             type="button"
